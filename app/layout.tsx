@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Uncial_Antiqua, Cinzel_Decorative } from "next/font/google";
+import { Geist, Geist_Mono, Uncial_Antiqua, Cinzel_Decorative, Rosarivo } from "next/font/google";
 import "./globals.css";
+import Navbar from "./ui/navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,7 +16,12 @@ const geistMono = Geist_Mono({
 // className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
 
 
-const unicial = Uncial_Antiqua({
+const uncial = Uncial_Antiqua({
+  weight: ["400"],
+  subsets: ["latin"]
+})
+
+const rosarivo = Rosarivo({
   weight: ["400"],
   subsets: ["latin"]
 })
@@ -38,9 +44,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cinzel.className} h-full antialiased`}
+      className={`${rosarivo.className} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <div className={`${cinzel.className} h-full antialiased mb-4`}>
+          <Navbar></Navbar>
+        </div>
+        <div className="px-2 sm:px-8">
+        {children}
+        </div>
+      </body>
     </html>
   );
 }

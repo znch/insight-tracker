@@ -1,11 +1,14 @@
 import Image from "next/image";
 import Navbar from "./ui/navbar";
+import { CharManagerWrapper } from "./ui/character/charManager";
 
 export default function Home() {
   return (
     <>
     <div>
-      <Navbar></Navbar>
+      <div>
+        <CharManagerWrapper></CharManagerWrapper>
+      </div>
     </div>
     </>
   );
