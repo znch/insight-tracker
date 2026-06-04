@@ -9,7 +9,7 @@ const eyeSlash = <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 
 export default function Navbar() {
     return(
         <>
-        <nav className="bg-black w-full flex text-white px-4 py-2">
+        <nav className="bg-black w-full flex text-white px-2 sm:px-8 py-2">
             <div id="anchor" className="flex">
                 <a href="/" className="inline-flex text-inherit gap-3 items-center">
                 {eyeSlash} 
