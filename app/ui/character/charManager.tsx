@@ -10,7 +10,7 @@ export const CharCardInline : FunctionComponent<CharacterCardInline> = (props) =
     return(
         
         <>
-        <Link href={""} className="py-2 px-2">
+        <Link href={"/character"} className="py-2 px-2">
         <div className="w-full border border-stone-800 bg-stone-200 px-2 py-2 flex flex-col gap-1 relative group transition duration-300">
         <h1 className="font-bold text-lg hover:underline">{props.charName}</h1>
         <h2>Lvl.{String(props.level)} {props.race} {props.charClass}</h2>
